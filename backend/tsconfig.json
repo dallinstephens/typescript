@@ -1,0 +1,26 @@
+{
+    "compilerOptions": {
+        "target": "ES2020", /* Specify ECMAScript target version for compiled JavaScript. */
+        "module": "CommonJS", /* Specify module code generation: Node.js typically uses CommonJS. */
+        "outDir": "./dist", /* Redirect output structure to the 'dist' folder. */
+        "rootDir": "./src", /* Specify the root directory of source files. */
+        "strict": true, /* Enable all strict type-checking options. */
+        "esModuleInterop": true, /* Emit additional JavaScript to ease support for importing CommonJS modules. */
+        "skipLibCheck": true, /* Skip type checking all .d.ts files. */
+        "forceConsistentCasingInFileNames": true, /* Ensure that casing is correct in imports. */
+        "resolveJsonModule": true, /* Allows importing .json files. */
+        "sourceMap": true, /* Generates corresponding .map file. */
+        "declaration": true, /* Generates corresponding '.d.ts' file. */
+        "lib": [
+            "ES2020",
+            "DOM"
+        ] /* Include standard library files, including DOM for basic Node.js types often found in express. */
+    },
+    "include": [
+        "src/**/*.ts" /* Specify files to include in compilation. */
+    ],
+    "exclude": [
+        "node_modules", /* Exclude node_modules from compilation. */
+        "dist" /* Exclude compiled output from compilation. */
+    ]
+}

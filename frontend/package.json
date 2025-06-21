@@ -1,0 +1,35 @@
+{
+  "name": "file-uploader-frontend",
+  "version": "1.0.0",
+  "description": "Frontend file uploader and downloader using VS Code, TypeScript, Node.js, HTML, and CSS.",
+  "private": true,
+  "type": "module",
+  "main": "dist/app.js",
+  "types": "dist/app.d.ts",
+  "files": [
+    "dist"
+  ],
+  "license": "Apache-2.0",
+  "keywords": [],
+  "scripts": {
+    "start": "lite-server",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "gts lint",
+    "clean": "gts clean && rm -rf dist",
+    "build": "tsc",
+    "app": "node --loader ts-node/esm src/app.ts",
+    "experimenting": "node --loader ts-node/esm src/experimenting.ts",
+    "watch": "tsc --watch",
+    "fix": "gts fix",
+    "prepare": "npm.cmd run build",
+    "pretest": "npm.cmd run build",
+    "posttest": "npm.cmd run lint"
+  },
+  "devDependencies": {
+    "@types/node": "^22.7.5",
+    "gts": "^6.0.2",
+    "lite-server": "^2.6.1",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.6.3"
+  }
+}

@@ -1,0 +1,19 @@
+# General ignores for the root of the repository
+
+# Operating System Files
+.DS_Store # macOS
+Thumbs.db # Windows
+
+# IDE/Editor specific files
+.idea/ # IntelliJ IDEA
+.vscode/ # VS Code workspace settings if you don't want them tracked
+*.swp # Vim swap files
+*.bak # Backup files
+
+# Log files
+*.log
+logs/
+
+# Optional: if you ever had a root node_modules or output folder
+node_modules/
+# dist/

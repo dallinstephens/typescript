@@ -20,8 +20,12 @@
 
 {Make a list of websites that you found helpful in this project}
 
-- [Web Site Name](http://url.link.goes.here)
-- [Web Site Name](http://url.link.goes.here)
+- [How To Set Up a New TypeScript Project](https://www.digitalocean.com/community/tutorials/typescript-new-project)
+- [How To Work With TypeScript in Visual Studio Code](https://www.digitalocean.com/community/tutorials/how-to-work-with-typescript-in-visual-studio-code)
+- [What is TypeScript and why should you use it?](https://www.contentful.com/blog/what-is-typescript-and-why-should-you-use-it/)
+- [TypeScript Tutorial: W3Schools](https://www.w3schools.com/typescript/)
+- [Gemini](https://gemini.google.com/app)
+
 
 # Future Work
 
