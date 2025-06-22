@@ -104,6 +104,30 @@ app.get('/download/:filename', (req: Request, res: Response) => {
     });
 });
 
+// This is used to delete a file.
+app.delete('/delete/:filename', (req: Request, res: Response) => {
+    const filename = req.params.filename;
+    const filePath = path.join(UPLOAD_DIR, filename);
+
+    // This checks to see if the file exists before deciding to delete it.
+    fs.access(filePath, fs.constants.F_OK, (err: NodeJS.ErrnoException | null) => {
+        if (err) {
+            console.error(`File not found for deletion: ${filePath}`, err);
+            return res.status(404).json({ message: 'File not found.'});
+        }
+
+        // This deletes the file.
+        fs.unlink(filePath, (unlinkErr: NodeJS.ErrnoException | null) => {
+            if (unlinkErr) {
+                console.error(`Error deleting file ${filename}:`, unlinkErr);
+                return res.status(500).json({ message: 'Could not delete the file.' });               
+            }
+            console.log(`File deleted: ${filename}`);
+            res.status(200).json({ message: `File ${filename} deleted successfully.`});
+        });
+    });
+});
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
     console.log(`Uploads directory: ${UPLOAD_DIR}`);
